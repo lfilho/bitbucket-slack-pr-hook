@@ -84,10 +84,10 @@ module.exports = function () {
             var data = extractPrData(pr);
 
             var result = {
-                fallback: 'PR *created* by ' + data.prAuthor + ' for ' + data.repoName + ':',
+                fallback: '<' + data.prUrl + '|PR *created* by ' + data.prAuthor + '> for ' + data.repoName + ':',
                 color: COLORS.blue,
                 fields: [{
-                    title: '<' + data.prUrl + '|' + data.prTitle + '>',
+                    title: data.prTitle,
                     value: data.repoSourceName + ' -> ' + data.repoDestinationName
                 }, {
                     title: 'Project:',
