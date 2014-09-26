@@ -25,6 +25,7 @@
     "body-parser": "^1.4.3",
     "express": "^4.4.4",
     "logfmt": "^1.1.2",
+    "spice": "^1.0.2",
     "node-slack": "git+https://github.com/xoxco/node-slack.git"
   },
   "engines": {
