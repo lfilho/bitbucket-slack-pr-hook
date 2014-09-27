@@ -17,7 +17,7 @@ module.exports = function () {
         params.text = message.fallback;
         params.attachments[0] = message;
         
-        if (channel != '') {
+        if (channel !== '') {
             params.channel = '#' + channel;
         } 
 
