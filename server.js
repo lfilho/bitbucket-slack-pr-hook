@@ -1,8 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var logfmt = require('logfmt');
-var slackService = require('./slackService');
-var bitbucketParser = require('./bitbucketParser');
+
+var slackService = require('./lib/slackService');
+var bitbucketParser = require('./lib/bitbucketParser');
 
 var port = Number(process.env.PORT) || 5000;
 
