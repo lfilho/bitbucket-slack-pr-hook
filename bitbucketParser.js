@@ -44,8 +44,6 @@ var extractPrData = function (pr) {
 };
 
 module.exports = function () {
-    var spice = require('spice');
-
     var COLORS = {
         red: '#ff0000',
         green: '#00ff00',
