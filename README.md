@@ -1,6 +1,8 @@
 bitbucket-slack-pr-hook
 =======================
 
+[![Build Status](https://travis-ci.org/lfilho/bitbucket-slack-pr-hook.svg?branch=master)](https://travis-ci.org/lfilho/bitbucket-slack-pr-hook)
+
 Receive Pull Requests notifications from BitBucket and sends them to Slack.
 
 ## Features
@@ -50,7 +52,7 @@ You can install it in your own local infraestructure or in a cloud service like 
   4. Configure your application according to the section "Configuration" above
   5. Install NodeJS if you don't have it
   6. Run `npm install` in the app's root folder
- 
+
  Important note: make sure you don't have any firewall blocking the incoming TCP port (default is PORT 5000 as defined in the Configuration section above)
 
 ## Seting up the Bitbucket integration and use
