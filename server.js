@@ -14,11 +14,13 @@ app.get('/', function (req, res) {
     res.send('Set your repository\'s Pull Request POST hook to this page\'s URL.');
 });
 
-app.post('/', function (req, res) {
+app.post('*', function (req, res) {
+    channel = req.path.substring(1);
+
     var message = bitbucketParser.generateMessage(req.body);
 
     if (message !== undefined) {
-        slackService.sendMessage(message);
+        slackService.sendMessage(message, channel);
     }
 
     res.status(200).end();

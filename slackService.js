@@ -12,10 +12,14 @@ module.exports = function () {
         attachments: []
     };
 
-    var sendMessage = function (message) {
+    var sendMessage = function (message, channel) {
         // `text` is mandatory:
         params.text = message.fallback;
         params.attachments[0] = message;
+        
+        if (channel != '') {
+            params.channel = '#' + channel;
+        } 
 
         slack.send(params, noop);
     };

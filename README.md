@@ -50,7 +50,17 @@ You can install it in your own local infraestructure or in a cloud service like 
   4. Configure your application according to the section "Configuration" above
   5. Install NodeJS if you don't have it
   6. Run `npm install` in the app's root folder
-  7. Run `node server.js` (or `npm start`) and you are ready to roll.
+ 
+ Important note: make sure you don't have any firewall blocking the incoming TCP port (default is PORT 5000 as defined in the Configuration section above)
+
+## Seting up the Bitbucket integration and use
+
+  1. Run `node server.js` (or `npm start`) to fire up the application (you can do `node server.js &` to run it as a daemon in your Linux box)
+  2. In your main Bitbucket repository, go to Settings > Hooks and create a new `Pull Request POST` hook
+  3. Set up the URL as http://<server>:<port>{/<channel>}.
+     a. <server> is your host FQDN or its IP address
+     b. <port> is either 5000 or any other you defined in the configuration section
+     c. <channel> is an optional Slack channel where you want to receive this specific notifications - if it's not defined here it will use the one you defined in config.js
 
 ## Credits
 
