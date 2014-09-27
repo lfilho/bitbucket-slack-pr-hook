@@ -1,0 +1,19 @@
+{
+    "pullrequest_unapprove":{
+        "date":"2013-07-19 21:34:33+00:00",
+        "user":{
+            "username":"detkin",
+            "display_name":"Dylan Etkin",
+            "links":[
+                {
+                    "href":"https://api.bitbucket.org/1.0/users/detkin",
+                    "rel":"self"
+                },
+                {
+                    "href":"https://bitbucket.org/detkin",
+                    "rel":"html"
+                }
+            ]
+        }
+    }
+}

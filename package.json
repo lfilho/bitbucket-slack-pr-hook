@@ -7,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/liflho/bitbucket-slack-pr-hook"
   },
+  "scripts": {
+      "test": "node_modules/buster/bin/buster-test"
+  },
   "keywords": [
     "bitbucket",
     "slack",
@@ -29,5 +32,8 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "buster": "^0.7.14"
   }
 }

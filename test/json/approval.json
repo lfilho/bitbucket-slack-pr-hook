@@ -1,0 +1,17 @@
+{
+    "pullrequest_approve":{
+        "date": "2013-11-05T02:03:03.551896+00:00",
+        "user": {
+            "display_name": "Erik van Zijst",
+            "links": {
+                "avatar": {
+                    "href": "https://bitbucket-staging-assetroot.s3.amazonaws.com/c/photos/2013/Oct/28/evzijst-avatar-3454044670-3_avatar.png"
+                },
+                "self": {
+                    "href": "http://api.bitbucket.org/2.0/users/evzijst"
+                }
+            },
+            "username": "evzijst"
+        }
+    }
+}

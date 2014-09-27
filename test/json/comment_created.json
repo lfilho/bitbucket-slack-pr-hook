@@ -1,0 +1,40 @@
+{
+    "pullrequest_comment_created":{
+        "links": {
+            "self": {
+                "href": "https://api.bitbucket.org/2.0/repositories/evzijst/bitbucket2/pullrequests/24/comments/13"
+            },
+            "code": {
+                "href": "https://api.bitbucket.org/2.0/repositories/evzijst/bitbucket2/diff/evzijst/bitbucket2:325625d47b0a..82d48819e5f7?path=apps%2Faccount%2Ftemplatetags%2Faccount.py"
+            },
+            "html": {
+                "href": "https://bitbucket.org/evzijst/bitbucket2/pull-request/24/_/diff#comment-13"
+            }
+        },
+        "content": {
+            "raw": "Inline comment.",
+            "markup": "markdown",
+            "html": "<p>Inline comment.</p>"
+        },
+        "created_on": "2013-11-07T05:23:36.013764+00:00",
+        "user": {
+            "username": "evzijst",
+            "display_name": "Erik van Zijst",
+            "links": {
+                "self": {
+                    "href": "https://api.bitbucket.org/2.0/users/evzijst"
+                },
+                "avatar": {
+                    "href": "https://bitbucket-staging-assetroot.s3.amazonaws.com/c/photos/2013/Oct/28/evzijst-avatar-3454044670-3_avatar.png"
+                }
+            }
+        },
+        "updated_on": "2013-11-07T05:23:36.015070+00:00",
+        "inline": {
+            "to": 237,
+            "from": null,
+            "path": "apps/account/templatetags/account.py"
+        },
+        "id": 13
+    }
+}
