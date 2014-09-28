@@ -81,10 +81,41 @@ describe('generateMessage', function () {
         expect(out.fields.length).toEqual(2);
     });
 
+    it('should return comment created message if passed comment_created action', function() {
+        var data = JSON.parse(readFile('test/json/comment_created.json', 'utf8'));
+        var out = parser.generateMessage(data);
+
+        expect(out).toBeDefined();
+        expect(out.fallback).toMatch('comment');
+        expect(out.fallback).toMatch('*posted*');
+        expect(out.color).toEqual(COLORS.yellow);
+        expect(out.fields.length).toEqual(1);
+    });
+
+    it('should return comment deleted message if passed comment_deleted action', function() {
+        var data = JSON.parse(readFile('test/json/comment_deleted.json', 'utf8'));
+        var out = parser.generateMessage(data);
+
+        expect(out).toBeDefined();
+        expect(out.fallback).toMatch('comment');
+        expect(out.fallback).toMatch('*deleted*');
+        expect(out.color).toEqual(COLORS.yellow);
+        expect(out.fields.length).toEqual(1);
+    });
+
+    it('should return comment updated message if passed comment_updated action', function() {
+        var data = JSON.parse(readFile('test/json/comment_updated.json', 'utf8'));
+        var out = parser.generateMessage(data);
+
+        expect(out).toBeDefined();
+        expect(out.fallback).toMatch('comment');
+        expect(out.fallback).toMatch('*updated*');
+        expect(out.color).toEqual(COLORS.yellow);
+        expect(out.fields.length).toEqual(1);
+    });
+
     it('should return undefined if passed unknown pull request action', function() {
         var out = parser.generateMessage({'unknown': 'dunno'});
         expect(out).not.toBeDefined();
     });
-
-    //TODO comment created, updated deleted
 });
