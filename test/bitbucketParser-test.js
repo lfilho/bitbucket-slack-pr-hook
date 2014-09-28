@@ -3,18 +3,13 @@
 var buster = require('buster');
 var fs = require('fs');
 var parser = require('../lib/bitbucketParser');
+var util = require('../lib/util');
 
 // Make some functions global for BDD style
 buster.spec.expose();
 var expect = buster.expect;
 var readFile = function (file, callback) {
     return fs.readFile(file, { encoding: 'utf8' }, callback);
-};
-var COLORS = {
-    red: '#ff0000',
-    green: '#00ff00',
-    blue: '#0000ff',
-    yellow: '#ffff00'
 };
 
 describe('generateMessage', function () {
@@ -26,7 +21,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
 
             expect(out.fallback).toMatch('*created*');
-            expect(out.color).toEqual(COLORS.blue);
+            expect(out.color).toEqual(util.COLORS.blue);
             expect(out.fields.length).toEqual(2);
 
             done();
@@ -41,7 +36,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
 
             expect(out.fallback).toMatch('*updated*');
-            expect(out.color).toEqual(COLORS.blue);
+            expect(out.color).toEqual(util.COLORS.blue);
             expect(out.fields.length).toEqual(2);
 
             done();
@@ -56,7 +51,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
 
             expect(out.fallback).toMatch('*approved*');
-            expect(out.color).toEqual(COLORS.green);
+            expect(out.color).toEqual(util.COLORS.green);
             expect(out.fields).not.toBeDefined();
 
             done();
@@ -71,7 +66,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
 
             expect(out.fallback).toMatch('*UNapproved*');
-            expect(out.color).toEqual(COLORS.yellow);
+            expect(out.color).toEqual(util.COLORS.yellow);
             expect(out.fields).not.toBeDefined();
 
             done();
@@ -86,7 +81,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
 
             expect(out.fallback).toMatch('*declined*');
-            expect(out.color).toEqual(COLORS.red);
+            expect(out.color).toEqual(util.COLORS.red);
             expect(out.fields.length).toEqual(3);
 
             done();
@@ -100,7 +95,7 @@ describe('generateMessage', function () {
 
             expect(out).toBeDefined();
             expect(out.fallback).toMatch('*merged*');
-            expect(out.color).toEqual(COLORS.green);
+            expect(out.color).toEqual(util.COLORS.green);
             expect(out.fields.length).toEqual(2);
 
             done();
@@ -115,7 +110,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
             expect(out.fallback).toMatch('comment');
             expect(out.fallback).toMatch('*posted*');
-            expect(out.color).toEqual(COLORS.yellow);
+            expect(out.color).toEqual(util.COLORS.yellow);
             expect(out.fields.length).toEqual(1);
 
             done();
@@ -130,7 +125,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
             expect(out.fallback).toMatch('comment');
             expect(out.fallback).toMatch('*deleted*');
-            expect(out.color).toEqual(COLORS.yellow);
+            expect(out.color).toEqual(util.COLORS.yellow);
             expect(out.fields.length).toEqual(1);
 
             done();
@@ -145,7 +140,7 @@ describe('generateMessage', function () {
             expect(out).toBeDefined();
             expect(out.fallback).toMatch('comment');
             expect(out.fallback).toMatch('*updated*');
-            expect(out.color).toEqual(COLORS.yellow);
+            expect(out.color).toEqual(util.COLORS.yellow);
             expect(out.fields.length).toEqual(1);
 
             done();
@@ -153,6 +148,7 @@ describe('generateMessage', function () {
     });
 
     it('should return undefined if passed unknown pull request action', function () {
+        this.stub(console, 'log');
         var out = parser.generateMessage({'unknown': 'dunno'});
         expect(out).not.toBeDefined();
     });
