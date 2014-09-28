@@ -3,7 +3,7 @@ bitbucket-slack-pr-hook
 
 [![Build Status](https://travis-ci.org/lfilho/bitbucket-slack-pr-hook.svg?branch=master)](https://travis-ci.org/lfilho/bitbucket-slack-pr-hook)
 
-Receive Pull Requests notifications from BitBucket and sends them to Slack.
+Receive Pull Requests notifications from BitBucket and send them to Slack.
 
 ## Features
 
