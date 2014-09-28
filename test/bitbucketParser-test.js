@@ -1,5 +1,7 @@
+'use strict';
+
 var buster = require('buster');
-var bitbucketParser = require('../lib/bitbucketParser');
+// var bitbucketParser = require('../lib/bitbucketParser');
 
 // Make some functions global for BDD style
 buster.spec.expose();

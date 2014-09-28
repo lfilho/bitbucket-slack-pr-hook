@@ -1,0 +1,44 @@
+{
+    "node": true,
+    "evil": true,
+    "devel": false,
+    "browser": true,
+
+    "strict": true,
+    "globalstrict": true,
+    "forin": true,
+    "immed": true,
+    "newcap": true,
+    "noarg": true,
+    "curly": true,
+    "trailing": true,
+    "eqeqeq": true,
+    "bitwise": true,
+    "noempty": true,
+    "latedef": true,
+    "nonew": true,
+    "maxdepth": 3,
+    "undef": true,
+    "unused": true,
+
+    "predef":
+    [
+        "console",
+        "define",
+        "require",
+        "_",
+        "Modernizr",
+        "Backbone",
+        "async",
+        "beforeEach",
+        "afterEach",
+        "describe",
+        "it",
+        "xit",
+        "xdescribe",
+        "sinon",
+        "escape",
+        "unescape",
+        "encodeURIComponent"
+    ]
+}

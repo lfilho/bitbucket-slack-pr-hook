@@ -1,3 +1,5 @@
+'use strict';
+
 var express = require('express');
 var bodyParser = require('body-parser');
 var logfmt = require('logfmt');
@@ -16,8 +18,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('*', function (req, res) {
-    channel = req.path.substring(1);
-
+    var channel = req.path.substring(1);
     var message = bitbucketParser.generateMessage(req.body);
 
     if (message !== undefined) {
