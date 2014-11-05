@@ -8,7 +8,10 @@
     "url": "https://github.com/liflho/bitbucket-slack-pr-hook"
   },
   "scripts": {
-      "test": "node_modules/buster/bin/buster-test"
+    "start": "node server",
+    "build-container": "docker build -t bitbucket-slack-pr-hook .",
+    "start-container": "docker run -P -i -t bitbucket-slack-pr-hook npm start",
+    "test": "node_modules/buster/bin/buster-test"
   },
   "keywords": [
     "bitbucket",
@@ -26,6 +29,7 @@
   "dependencies": {
     "array.prototype.find": "^1.0.0",
     "body-parser": "^1.4.3",
+    "dotenv": "^0.4.0",
     "express": "^4.4.4",
     "logfmt": "^1.1.2",
     "node-slack": "git+https://github.com/xoxco/node-slack.git"

@@ -1,4 +1,4 @@
 language: node_js
 node_js:
   - "0.10"
-before_script: cp config-dist.js config.js
+env: SLACK_TOKEN=abcdefghijklmnopqrstuvxz SLACK_DOMAIN=mycompany SLACK_CHANNEL=myChannel SLACK_USERNAME=MyAwesomeBot
