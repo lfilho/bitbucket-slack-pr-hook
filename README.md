@@ -47,6 +47,8 @@ SLACK_CHANNEL=mychannel
 SLACK_USERNAME=MyAwesomeBot
 ```
 
+Important: if you're going to use a `.env` file AND using Docker, edit it before building the Dockerfile.
+
 When running the service in Docker container, the config values can be provided as parameters:
 
 ```
