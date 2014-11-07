@@ -88,7 +88,7 @@ which makes it easy to setup the environment without worrying about the requirem
           -e SLACK_DOMAIN=company -e SLACK_CHANNEL=channel \
           -p 5000:5000 -d bitbucket-slack-pr-hook
 
-  6. Ensure the container is running (you should also be able to access the service using web browser: http://dockerhost:5000/).
+  6. Ensure the container is running (you should also be able to access the service using web browser: http://<dockerhost>:5000/).
 
      **Note:** In Linux the `<dockerhost>` is `localhost`, with Boot2docker use the IP reported by the command: `boot2docker ip`
 
