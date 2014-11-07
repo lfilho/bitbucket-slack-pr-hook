@@ -95,14 +95,25 @@ which makes it easy to setup the environment without worrying about the requirem
      **Note:** In Linux the `<dockerhost>` is `localhost`, with Boot2docker use the IP reported by the command: `boot2docker ip`
 
 
-## Setting up the Bitbucket integration and use
+## Setting up the Bitbucket
 
-  1. Run `node server.js` (or `npm start`) to fire up the application (you can do `node server.js &` to run it as a daemon in your Linux box)
-  2. In your main Bitbucket repository, go to Settings > Hooks and create a new `Pull Request POST` hook
-  3. Set up the URL as `http://<server>:<port>{/<channel>}`.
+  1. In your main Bitbucket repository, go to Settings > Hooks and create a new `Pull Request POST` hook
+  2. Set up the URL as `http://<server>:<port>{/<channel>}`.
     * `<server>` is your host FQDN or its IP address
     * `<port>` is either 5000 or any other you defined in the configuration section
     * `<channel>` is an optional Slack channel where you want to receive this specific notifications - if it's not defined here it will use the one you defined in Configuration -section.
+
+## Use
+
+### Via plain node
+
+  1. Run `npm start` (or `node server.js`) to fire up the application (you can do `node server.js &` to run it as a daemon in your Linux box)
+
+### Via Docker
+
+  1. Run `npm run build-container` to build the container
+  2. Run `npm run start-container` to start the container and the server inside it
+  3. When needed, you can use `npm run stop-container` and `npm run reload-container`
 
 ## Credits
 
