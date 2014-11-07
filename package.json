@@ -5,12 +5,14 @@
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liflho/bitbucket-slack-pr-hook"
+    "url": "https://github.com/lfilho/bitbucket-slack-pr-hook"
   },
   "scripts": {
     "start": "node server",
     "build-container": "docker build -t bitbucket-slack-pr-hook .",
-    "start-container": "docker run -P -i -t bitbucket-slack-pr-hook npm start",
+    "start-container": "docker run --name bb-slack-hook -p 5000:5000 -d bitbucket-slack-pr-hook npm start",
+    "stop-container": "docker stop bb-slack-hook",
+    "restart-container": "docker restart bb-slack-hook",
     "test": "node_modules/buster/bin/buster-test"
   },
   "keywords": [
@@ -18,14 +20,15 @@
     "slack",
     "pull request",
     "pr",
+    "docker",
     "chatops"
   ],
   "author": "Luiz Gonzaga dos Santos Filho",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/liflho/bitbucket-slack-pr-hook/issues"
+    "url": "https://github.com/lfilho/bitbucket-slack-pr-hook/issues"
   },
-  "homepage": "https://github.com/liflho/bitbucket-slack-pr-hook",
+  "homepage": "https://github.com/lfilho/bitbucket-slack-pr-hook",
   "dependencies": {
     "array.prototype.find": "^1.0.0",
     "body-parser": "^1.4.3",
