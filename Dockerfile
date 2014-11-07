@@ -4,7 +4,7 @@ EXPOSE 5000
 
 # Install apps and dependencies
 RUN apt-get update
-RUN apt-get install -y nodejs npm
+RUN apt-get install -y nodejs npm git
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 # Run app as a custom user `app`
