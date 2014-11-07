@@ -1,7 +1,6 @@
 FROM ubuntu:14.04
 ENV PORT 5000
 EXPOSE 5000
-ENV NODE_ENV development
 
 # Install apps and dependencies
 RUN apt-get update
