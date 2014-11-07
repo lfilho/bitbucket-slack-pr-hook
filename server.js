@@ -4,10 +4,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var logfmt = require('logfmt');
 
+var config = require('./lib/config');
 var slackService = require('./lib/slackService');
 var bitbucketParser = require('./lib/bitbucketParser');
-
-var port = Number(process.env.PORT) || 5000;
 
 var app = express();
 app.use(logfmt.requestLogger());
@@ -28,6 +27,6 @@ app.post('*', function (req, res) {
     res.status(200).end();
 });
 
-app.listen(port, function () {
-    console.log('BitBucket PR Hook bridge listening on:', port);
+app.listen(config.port, function () {
+    console.log('BitBucket PR Hook bridge listening on:', config.port);
 });
