@@ -35,7 +35,7 @@
     "dotenv": "^0.4.0",
     "express": "^4.4.4",
     "logfmt": "^1.1.2",
-    "node-slack": "git+https://github.com/xoxco/node-slack.git"
+    "node-slack": "git+https://github.com/Dahlgren/node-slack.git#hook-url"
   },
   "engines": {
     "node": "0.10.x"
