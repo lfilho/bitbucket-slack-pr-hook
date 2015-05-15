@@ -2,7 +2,7 @@
   "name": "bitbucket-slack-pr-hook",
   "version": "0.1.0",
   "description": "Send BitBucket Pull Request notifications to Slack.",
-  "main": "server.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/lfilho/bitbucket-slack-pr-hook"
@@ -36,9 +36,6 @@
     "express": "^4.4.4",
     "logfmt": "^1.1.2",
     "node-slack": "git+https://github.com/xoxco/node-slack.git"
-  },
-  "engines": {
-    "node": "0.10.x"
   },
   "devDependencies": {
     "buster": "^0.7.14"
