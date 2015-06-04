@@ -1,0 +1,12 @@
+{
+  "apps" : [{
+    "name"        : "bb-slack-pr",
+    "script"      : "/home/cobrowser_deploy/projects/bitbucket-slack-pr-hook/server.js",
+    "args"        : [],
+    "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+    "ignore_watch" : ["[\\/\\\\]\\./", "node_modules"],
+    "watch"       : true,
+    "cwd"   : "/home/cobrowser_deploy/projects/bitbucket-slack-pr-hook/"
+  }
+  ]
+}
