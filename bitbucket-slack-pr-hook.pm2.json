@@ -5,7 +5,7 @@
     "args"        : [],
     "log_date_format"  : "YYYY-MM-DD HH:mm Z",
     "ignore_watch" : ["[\\/\\\\]\\./", "node_modules"],
-    "watch"       : true,
+    "watch"       : false,
     "cwd"   : "/home/cobrowser_deploy/projects/bitbucket-slack-pr-hook/"
   }
   ]
