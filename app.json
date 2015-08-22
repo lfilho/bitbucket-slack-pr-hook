@@ -1,0 +1,25 @@
+{
+  "name": "bitbucket-slack-pr-hook",
+  "description": "Receive Pull Requests notifications from Bitbucket and send them to Slack.",
+  "keywords": [
+    "productivity",
+    "slack",
+    "bitbucket",
+    "pull requests"
+  ],
+  "repository": "https://github.com/lfilho/bitbucket-slack-pr-hook",
+  "env": {
+    "SLACK_WEBHOOK": {
+      "description": "The slack incoming webhook url.",
+      "required": true
+    },
+    "SLACK_USERNAME": {
+      "description": "The slack bot's username. NOTE: Setting this will override integration settings.",
+      "required": false
+    },
+    "SLACK_CHANNEL": {
+      "description": "The slack channel to send notifications to. NOTE: Setting this will override integration settings.",
+      "required": false
+    }
+  }
+}
