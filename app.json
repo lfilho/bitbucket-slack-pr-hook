@@ -20,6 +20,26 @@
     "SLACK_CHANNEL": {
       "description": "The slack channel to send notifications to. NOTE: Setting this will override integration settings.",
       "required": false
+    },
+    "HEX_INFO": {
+      "description": "Hex Color for Merge & Approve",
+      "value": "#3498db",
+      "required": false
+    },
+    "HEX_DANGER": {
+      "description": "Hex Color for Declined",
+      "value": "#e74c3c",
+      "required": false
+    },
+    "HEX_WARNING": {
+      "description": "Hex Color for Unapprove, Comment: Created, Comment: Deleted, Comment: Updated",
+      "value": "#f1c40f",
+      "required": false
+    },
+    "HEX_SUCCESS": {
+      "description": "Hex Color for Merge & Approve",
+      "value": "#2ecc71",
+      "required": false
     }
   }
 }
