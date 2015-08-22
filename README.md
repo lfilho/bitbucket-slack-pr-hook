@@ -59,6 +59,25 @@ docker run -e PORT=5000 -e SLACK_TOKEN=123123 \
   -p 5000:5000 -d bitbucket-slack-pr-hook
 ```
 
+You can also adjust the HEX Colors for notification attachments by adjusting any environment variables in the example below.
+
+```
+#Adjust HEX colors ie: #fff000
+
+#Updated, Created
+HEX_INFO = #3498db
+
+#Declined
+HEX_DANGER = #e74c3c
+
+#Unapprove, Comment: Created, Comment: Deleted, Comment: Updated
+HEX_WARNING = #f1c40f
+
+#Merge & Approve
+HEX_SUCCESS = #2ecc71
+
+```
+
 ## Installation
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)    
