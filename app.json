@@ -1,0 +1,45 @@
+{
+  "name": "bitbucket-slack-pr-hook",
+  "description": "Receive Pull Requests notifications from Bitbucket and send them to Slack.",
+  "keywords": [
+    "productivity",
+    "slack",
+    "bitbucket",
+    "pull requests"
+  ],
+  "repository": "https://github.com/lfilho/bitbucket-slack-pr-hook",
+  "env": {
+    "SLACK_WEBHOOK": {
+      "description": "The slack incoming webhook url.",
+      "required": true
+    },
+    "SLACK_USERNAME": {
+      "description": "The slack bot's username. NOTE: Setting this will override integration settings.",
+      "required": false
+    },
+    "SLACK_CHANNEL": {
+      "description": "The slack channel to send notifications to. NOTE: Setting this will override integration settings.",
+      "required": false
+    },
+    "HEX_INFO": {
+      "description": "Hex Color for Merge & Approve",
+      "value": "#3498db",
+      "required": false
+    },
+    "HEX_DANGER": {
+      "description": "Hex Color for Declined",
+      "value": "#e74c3c",
+      "required": false
+    },
+    "HEX_WARNING": {
+      "description": "Hex Color for Unapprove, Comment: Created, Comment: Deleted, Comment: Updated",
+      "value": "#f1c40f",
+      "required": false
+    },
+    "HEX_SUCCESS": {
+      "description": "Hex Color for Merge & Approve",
+      "value": "#2ecc71",
+      "required": false
+    }
+  }
+}
