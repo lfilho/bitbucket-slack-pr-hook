@@ -18,7 +18,8 @@ app.get('/', function (req, res) {
 
 app.post('*', function (req, res) {
     var channel = req.path.substring(1);
-    var message = bitbucketParser.generateMessage(req.body);
+    var eventKey = req.headers['x-event-key'];
+    var message = bitbucketParser.generateMessage(req.body, eventKey);
 
     if (message !== undefined) {
         slackService.sendMessage(message, channel);
