@@ -1,0 +1,159 @@
+{
+  "pullrequest": {
+    "close_source_branch": true,
+    "task_count": 0,
+    "closed_by": null,
+    "destination": {
+      "commit": {
+        "links": {
+          "self": {
+            "href": "https:\/\/api.bitbucket.org\/2.0\/repositories\/brh55\/bitbucket-pullrequest-mock\/commit\/e26a3cbe1146"
+          }
+        },
+        "hash": "e26a3cbe1146"
+      },
+      "repository": {
+        "name": "bitbucket-pullrequest-mock",
+        "links": {
+          "html": {
+            "href": "https:\/\/bitbucket.org\/brh55\/bitbucket-pullrequest-mock"
+          },
+          "self": {
+            "href": "https:\/\/api.bitbucket.org\/2.0\/repositories\/brh55\/bitbucket-pullrequest-mock"
+          },
+          "avatar": {
+            "href": "https:\/\/bitbucket.org\/brh55\/bitbucket-pullrequest-mock\/avatar\/32\/"
+          }
+        },
+        "uuid": "{4a88beff-fbc3-444b-9333-0677121f2b79}",
+        "full_name": "brh55\/bitbucket-pullrequest-mock",
+        "type": "repository"
+      },
+      "branch": {
+        "name": "master"
+      }
+    },
+    "reason": "",
+    "created_on": "2016-01-05T00:08:24.947938+00:00",
+    "id": 6,
+    "participants": [
+    ],
+    "merge_commit": null,
+    "updated_on": "2016-01-05T02:09:21.936902+00:00",
+    "description": "This is a test.",
+    "title": "PR-Created",
+    "state": "OPEN",
+    "links": {
+      "html": {
+        "href": "https:\/\/bitbucket.org\/brh55\/bitbucket-pullrequest-mock\/pull-requests\/6"
+      },
+      "self": {
+        "href": "https:\/\/api.bitbucket.org\/2.0\/repositories\/brh55\/bitbucket-pullrequest-mock\/pullrequests\/6"
+      }
+    },
+    "reviewers": [
+    ],
+    "author": {
+      "username": "brh55",
+      "uuid": "{e97076e6-5f03-4cdf-abc5-7bb129684ba2}",
+      "links": {
+        "html": {
+          "href": "https:\/\/bitbucket.org\/brh55\/"
+        },
+        "self": {
+          "href": "https:\/\/api.bitbucket.org\/2.0\/users\/brh55"
+        },
+        "avatar": {
+          "href": "https:\/\/bitbucket.org\/account\/brh55\/avatar\/32\/"
+        }
+      },
+      "display_name": "Vladamir Jones",
+      "type": "user"
+    },
+    "comment_count": 0,
+    "source": {
+      "commit": {
+        "links": {
+          "self": {
+            "href": "https:\/\/api.bitbucket.org\/2.0\/repositories\/brh55\/bitbucket-pullrequest-mock\/commit\/fd30cdf3563f"
+          }
+        },
+        "hash": "fd30cdf3563f"
+      },
+      "repository": {
+        "name": "bitbucket-pullrequest-mock",
+        "links": {
+          "html": {
+            "href": "https:\/\/bitbucket.org\/brh55\/bitbucket-pullrequest-mock"
+          },
+          "self": {
+            "href": "https:\/\/api.bitbucket.org\/2.0\/repositories\/brh55\/bitbucket-pullrequest-mock"
+          },
+          "avatar": {
+            "href": "https:\/\/bitbucket.org\/brh55\/bitbucket-pullrequest-mock\/avatar\/32\/"
+          }
+        },
+        "uuid": "{4a88beff-fbc3-444b-9333-0677121f2b79}",
+        "full_name": "brh55\/bitbucket-pullrequest-mock",
+        "type": "repository"
+      },
+      "branch": {
+        "name": "dec"
+      }
+    },
+    "type": "pullrequest"
+  },
+  "actor": {
+    "username": "brh55",
+    "uuid": "{e97076e6-5f03-4cdf-abc5-7bb129684ba2}",
+    "links": {
+      "html": {
+        "href": "https:\/\/bitbucket.org\/brh55\/"
+      },
+      "self": {
+        "href": "https:\/\/api.bitbucket.org\/2.0\/users\/brh55"
+      },
+      "avatar": {
+        "href": "https:\/\/bitbucket.org\/account\/brh55\/avatar\/32\/"
+      }
+    },
+    "display_name": "Vladamir Jones",
+    "type": "user"
+  },
+  "repository": {
+    "is_private": true,
+    "full_name": "brh55\/bitbucket-pullrequest-mock",
+    "scm": "git",
+    "owner": {
+      "username": "brh55",
+      "uuid": "{e97076e6-5f03-4cdf-abc5-7bb129684ba2}",
+      "links": {
+        "html": {
+          "href": "https:\/\/bitbucket.org\/brh55\/"
+        },
+        "self": {
+          "href": "https:\/\/api.bitbucket.org\/2.0\/users\/brh55"
+        },
+        "avatar": {
+          "href": "https:\/\/bitbucket.org\/account\/brh55\/avatar\/32\/"
+        }
+      },
+      "display_name": "Vladamir Jones",
+      "type": "user"
+    },
+    "uuid": "{4a88beff-fbc3-444b-9333-0677121f2b79}",
+    "name": "bitbucket-pullrequest-mock",
+    "links": {
+      "html": {
+        "href": "https:\/\/bitbucket.org\/brh55\/bitbucket-pullrequest-mock"
+      },
+      "self": {
+        "href": "https:\/\/api.bitbucket.org\/2.0\/repositories\/brh55\/bitbucket-pullrequest-mock"
+      },
+      "avatar": {
+        "href": "https:\/\/bitbucket.org\/brh55\/bitbucket-pullrequest-mock\/avatar\/32\/"
+      }
+    },
+    "type": "repository"
+  }
+}
