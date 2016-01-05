@@ -29,7 +29,7 @@ So all we can do is something like "Comment posted for *a* PR" and then the snip
 ## Requirements
 
   * [Bitbucket](https://bitbucket.org/) repository with admin rights
-  * [Slack](https://slack.com/) channel token: Get your Slack token from your "integrations" page
+  * [Slack](https://slack.com/) Incoming Webhook Url: Get your Slack token from your "integrations" page
   * [Node.js](http://nodejs.org/) **OR** [Docker](https://www.docker.com/)
 
 ## Configuration
@@ -41,13 +41,14 @@ If you want to use `.env` file, copy the `example.env` as `.env` and modify it a
 
 ```
 PORT=5000
-SLACK_TOKEN=getfromslack
-SLACK_DOMAIN=mycompany
-SLACK_CHANNEL=mychannel
-SLACK_USERNAME=MyAwesomeBot
+SLACK_WEBHOOKURL=https://hooks.slack.com/services/.../.../...
+SLACK_USERNAME = AwesomeBot
+SLACK_CHANNEL = Repository
 ```
 
-Important: if you're going to use a `.env` file AND using Docker, edit it before building the Dockerfile.
+Note: Setting the `SLACK_USERNAME` or `SLACK_CHANNEL` will override the settings set on the incoming webhook integration page. If you want your team to edit any of these settings without redeploying, do not add them to your `.env` file.
+
+**Important**: if you're going to use a `.env` file AND using Docker, edit it before building the Dockerfile.
 
 When running the service in Docker container, the config values can be provided as parameters:
 
@@ -58,9 +59,32 @@ docker run -e PORT=5000 -e SLACK_TOKEN=123123 \
   -p 5000:5000 -d bitbucket-slack-pr-hook
 ```
 
+You can also adjust the HEX Colors for notification attachments by adjusting any environment variables in the example below.
+
+```
+#Adjust HEX colors ie: #fff000
+
+#Updated, Created
+HEX_INFO = #3498db
+
+#Declined
+HEX_DANGER = #e74c3c
+
+#Unapprove, Comment: Created, Comment: Deleted, Comment: Updated
+HEX_WARNING = #f1c40f
+
+#Merge & Approve
+HEX_SUCCESS = #2ecc71
+
+```
+
 ## Installation
 
-You can install it in your own local infrastructure or in a cloud service like heroku.
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)    
+    
+**OR**    
+    
+You can install it in your own local infrastructure or in any other cloud service.
 Alternatively, you can build a Docker image and [deploy as container](#installation-using-docker)
 
   1. Set up a server address in your local infrastructure that will serve this application (eg: `slackapi.mycompany.com` or `slackapi.heroku.com`)
@@ -86,8 +110,7 @@ which makes it easy to setup the environment without worrying about the requirem
 
   5. Start container with appropriate `-e` config parameters:
 
-        docker run -e PORT=5000 -e SLACK_TOKEN=123123 \
-          -e SLACK_DOMAIN=company -e SLACK_CHANNEL=channel \
+        docker run -e PORT=5000 -e SLACK_WEBHOOK=webhookurl \
           -p 5000:5000 -d bitbucket-slack-pr-hook
 
   6. Ensure the container is running (you should also be able to access the service using web browser: `http://<dockerhost>:5000/`).
