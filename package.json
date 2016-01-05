@@ -1,6 +1,6 @@
 {
   "name": "bitbucket-slack-pr-hook",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Send BitBucket Pull Request notifications to Slack.",
   "main": "index.js",
   "repository": {
