@@ -21,10 +21,6 @@ As for 2014-09-26 we support all BitBucket's action types:
 
 See Bitbucket's official docs: [Pull Request POST hook management](https://confluence.atlassian.com/display/BITBUCKET/Pull+Request+POST+hook+management)
 
-## Caveats
-
-Bitbucket does not provide all necessary data in actions responses. For example, for a `comment_*` action we don't have the PR number, link nor name.
-So all we can do is something like "Comment posted for *a* PR" and then the snippet of the comment. But currently there's no way to know where did this comment came from.
 
 ## Requirements
 
