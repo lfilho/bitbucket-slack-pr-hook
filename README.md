@@ -34,16 +34,28 @@ So all we can do is something like "Comment posted for *a* PR" and then the snip
 
 ## Configuration
 
-The configuration variables are set via environment variables and/or using `.env` file (environment variable takes preference over `.env` file if found).
-This makes it easy to run service also in Docker container.
+The configuration variables are set with environment variables and/or using `.env` file (environment variable takes preference over `.env` file if found).
 
-If you want to use `.env` file, copy the `example.env` as `.env` and modify it as needed:
+Environment Variable   | Required | Description | Example
+---------------------- | -------- | ----------- | ---------
+SLACK_WEBHOOKURL | Y | The incoming hook url found on your Slack team's integration page | https://hooks.slack.com/services/XX/XXX/XXXX
+SLACK_USERNAME | N | Username of the Slack bot. If not set, bot will default to integration settings. | BitbucketNotification 
+SLACK_CHANNEL | N | Channel to post notifications on. If not set, bot will default to integration settings.  | RepositoryUpdate
+HEX_INFO | N | Hex color of updated, and created | #3498db
+HEX_DANGER | N | Hex color of declined | #e74c3c
+HEX_WARNING | N | Hex color of unapprove, comment: created, comment: deleted, and comment: updated | #f1c40f
+HEX_SUCCESS | N | Hex color of merge, and approve | #2ecc71
+
+If you want to use `.env` file, copy the `example.env` as `.env` and modify it as needed. 
+Your configuration would look like the example below:
 
 ```
 PORT=5000
-SLACK_WEBHOOKURL=https://hooks.slack.com/services/.../.../...
-SLACK_USERNAME = AwesomeBot
-SLACK_CHANNEL = Repository
+SLACK_WEBHOOKURL=https://hooks.slack.com/services/A123ka9/A123910a9d8/mkas929199sad83lmk7h
+SLACK_USERNAME=AwesomeBot
+SLACK_CHANNEL=Repository
+HEX_SUCCESS=#2ecc71
+HEX_DANGER=#e74c3c
 ```
 
 Note: Setting the `SLACK_USERNAME` or `SLACK_CHANNEL` will override the settings set on the incoming webhook integration page. If you want your team to edit any of these settings without redeploying, do not add them to your `.env` file.
@@ -59,33 +71,15 @@ docker run -e PORT=5000 -e SLACK_TOKEN=123123 \
   -p 5000:5000 -d bitbucket-slack-pr-hook
 ```
 
-You can also adjust the HEX Colors for notification attachments by adjusting any environment variables in the example below.
-
-```
-#Adjust HEX colors ie: #fff000
-
-#Updated, Created
-HEX_INFO = #3498db
-
-#Declined
-HEX_DANGER = #e74c3c
-
-#Unapprove, Comment: Created, Comment: Deleted, Comment: Updated
-HEX_WARNING = #f1c40f
-
-#Merge & Approve
-HEX_SUCCESS = #2ecc71
-
-```
-
-## Installation
-
+## Automated Installation
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/)
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)    
-    
-**OR**    
-    
-You can install it in your own local infrastructure or in any other cloud service.
-Alternatively, you can build a Docker image and [deploy as container](#installation-using-docker)
+
+## Manual Installation
+- [Local Infrastructure or Cloud Services](#local-infrastructure-or-cloud-services)
+- [Docker](#docker)
+
+### Local Infrastructure or Cloud Services
 
   1. Set up a server address in your local infrastructure that will serve this application (eg: `slackapi.mycompany.com` or `slackapi.heroku.com`)
   2. Clone/download this repo to your chosen server
@@ -93,10 +87,9 @@ Alternatively, you can build a Docker image and [deploy as container](#installat
   4. Install NodeJS if you don't have it
   5. Run `npm install` in the app's root folder
 
-  **Important note**: make sure you don't have any firewall blocking the incoming TCP port (default is PORT 5000 as defined in the "Configuration" section above)
+**Important note**: make sure you don't have any firewall blocking the incoming TCP port (default is PORT 5000 as defined in the "Configuration" section above)
 
-## Installation using Docker
-
+### Docker
 Service can also be installed & deployed using [Docker](https://www.docker.com/) containers,
 which makes it easy to setup the environment without worrying about the requirements.
 
@@ -117,8 +110,7 @@ which makes it easy to setup the environment without worrying about the requirem
 
      **Note:** In Linux the `<dockerhost>` is `localhost`, with Boot2docker use the IP reported by the command: `boot2docker ip`
 
-
-## Setting up the Bitbucket
+## Setting up the Bitbucket Repository
 
   1. In your main Bitbucket repository, go to Settings > Hooks and create a new `Pull Request POST` hook
   2. Set up the URL as `http://<server>:<port>{/<channel>}`.
@@ -126,7 +118,7 @@ which makes it easy to setup the environment without worrying about the requirem
     * `<port>` is either 5000 or any other you defined in the configuration section
     * `<channel>` is an optional Slack channel where you want to receive this specific notifications - if it's not defined here it will use the one you defined in Configuration -section.
 
-## Use
+## Activate
 
 ### Via plain node
 
