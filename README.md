@@ -38,7 +38,7 @@ The configuration variables are set with environment variables and/or using `.en
 
 Environment Variable   | Required | Description | Example
 ---------------------- | -------- | ----------- | ---------
-SLACK_WEBHOOKURL | Y | The incoming hook url found on your Slack team's integration page | https://hooks.slack.com/services/XX/XXX/XXXX
+SLACK_WEBHOOK | Y | The incoming hook url found on your Slack team's integration page | https://hooks.slack.com/services/XX/XXX/XXXX
 SLACK_USERNAME | N | Username of the Slack bot. If not set, bot will default to integration settings. | BitbucketNotification 
 SLACK_CHANNEL | N | Channel to post notifications on. If not set, bot will default to integration settings.  | RepositoryUpdate
 HEX_INFO | N | Hex color of updated, and created | #3498db
@@ -51,7 +51,7 @@ Your configuration would look like the example below:
 
 ```
 PORT=5000
-SLACK_WEBHOOKURL=https://hooks.slack.com/services/A123ka9/A123910a9d8/mkas929199sad83lmk7h
+SLACK_WEBHOOK=https://hooks.slack.com/services/A123ka9/A123910a9d8/mkas929199sad83lmk7h
 SLACK_USERNAME=AwesomeBot
 SLACK_CHANNEL=Repository
 HEX_SUCCESS=#2ecc71
