@@ -52,6 +52,40 @@
       }
     },
     "reviewers": [
+      {
+        "username": "dummyReviewer1",
+        "type": "user",
+        "display_name": "Dummy Reviewer",
+        "uuid": "{7aade15c-c2c0-4208-a2c6-a2a4061a7615}",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/dummyReviewer1"
+          },
+          "html": {
+            "href": "https://bitbucket.org/dummyReviewer1/"
+          },
+          "avatar": {
+            "href": "https://bitbucket.org/account/dummyReviewer1/avatar/32/"
+          }
+        }
+      },
+      {
+        "username": "dummyReviewer2",
+        "type": "user",
+        "display_name": "dummyReviewer2",
+        "uuid": "{af6f9d82-57f3-495a-807a-8969fd09f69d}",
+        "links": {
+          "self": {
+            "href": "https://api.bitbucket.org/2.0/users/dummyReviewer2"
+          },
+          "html": {
+            "href": "https://bitbucket.org/dummyReviewer2/"
+          },
+          "avatar": {
+            "href": "https://bitbucket.org/account/dummyReviewer2/avatar/32/"
+          }
+        }
+      }
     ],
     "author": {
       "username": "brh55",
