@@ -21,6 +21,10 @@
       "description": "The slack channel to send notifications to. NOTE: Setting this will override integration settings.",
       "required": false
     },
+    "MENTION_REVIEWERS": {
+      "description": "Set to true if you want to mention reviewers in slack channel.",
+      "required": false
+    },
     "HEX_INFO": {
       "description": "Hex Color for Merge & Approve",
       "value": "#3498db",
@@ -40,6 +44,6 @@
       "description": "Hex Color for Merge & Approve",
       "value": "#2ecc71",
       "required": false
-    }
+    },
   }
 }
