@@ -39,14 +39,15 @@ The configuration variables are set with environment variables and/or using `.en
 Environment Variable   | Required | Description | Example
 ---------------------- | -------- | ----------- | ---------
 SLACK_WEBHOOK | Y | The incoming hook url found on your Slack team's integration page | https://hooks.slack.com/services/XX/XXX/XXXX
-SLACK_USERNAME | N | Username of the Slack bot. If not set, bot will default to integration settings. | BitbucketNotification 
+SLACK_USERNAME | N | Username of the Slack bot. If not set, bot will default to integration settings. | BitbucketNotification
 SLACK_CHANNEL | N | Channel to post notifications on. If not set, bot will default to integration settings.  | RepositoryUpdate
+MENTION_REVIEWERS | N | Set to true if you want to mention reviewers in slack channel | false
 HEX_INFO | N | Hex color of updated, and created | #3498db
 HEX_DANGER | N | Hex color of declined | #e74c3c
 HEX_WARNING | N | Hex color of unapprove, comment: created, comment: deleted, and comment: updated | #f1c40f
 HEX_SUCCESS | N | Hex color of merge, and approve | #2ecc71
 
-If you want to use `.env` file, copy the `example.env` as `.env` and modify it as needed. 
+If you want to use `.env` file, copy the `example.env` as `.env` and modify it as needed.
 Your configuration would look like the example below:
 
 ```
