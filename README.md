@@ -32,6 +32,14 @@ So all we can do is something like "Comment posted for *a* PR" and then the snip
   * [Slack](https://slack.com/) Incoming Webhook Url: Get your Slack token from your "integrations" page
   * [Node.js](http://nodejs.org/) **OR** [Docker](https://www.docker.com/)
 
+## Optional Features
+
+### Mention reviewers
+
+If you want to automatically notify the PR reviewers, you can set to `true` the environment variable `MENTION_REVIEWERS`.
+
+It will assume that the Bitbucket username will be the same in Slack. If not, the user could add a "highlight word" in their preferences for their username used in Bitbucket.
+
 ## Configuration
 
 The configuration variables are set with environment variables and/or using `.env` file (environment variable takes preference over `.env` file if found).
