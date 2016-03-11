@@ -32,6 +32,14 @@ So all we can do is something like "Comment posted for *a* PR" and then the snip
   * [Slack](https://slack.com/) Incoming Webhook Url: Get your Slack token from your "integrations" page
   * [Node.js](http://nodejs.org/) **OR** [Docker](https://www.docker.com/)
 
+## Optional Features
+
+### Mention reviewers
+
+If you want to automatically notify the PR reviewers, you can set to `true` the environment variable `MENTION_REVIEWERS`.
+
+It will assume that the Bitbucket username will be the same in Slack. If not, the user could add a "highlight word" in their preferences for their username used in Bitbucket.
+
 ## Configuration
 
 The configuration variables are set with environment variables and/or using `.env` file (environment variable takes preference over `.env` file if found).
@@ -39,14 +47,15 @@ The configuration variables are set with environment variables and/or using `.en
 Environment Variable   | Required | Description | Example
 ---------------------- | -------- | ----------- | ---------
 SLACK_WEBHOOK | Y | The incoming hook url found on your Slack team's integration page | https://hooks.slack.com/services/XX/XXX/XXXX
-SLACK_USERNAME | N | Username of the Slack bot. If not set, bot will default to integration settings. | BitbucketNotification 
+SLACK_USERNAME | N | Username of the Slack bot. If not set, bot will default to integration settings. | BitbucketNotification
 SLACK_CHANNEL | N | Channel to post notifications on. If not set, bot will default to integration settings.  | RepositoryUpdate
+MENTION_REVIEWERS | N | Set to true if you want to mention reviewers in slack channel | false
 HEX_INFO | N | Hex color of updated, and created | #3498db
 HEX_DANGER | N | Hex color of declined | #e74c3c
 HEX_WARNING | N | Hex color of unapprove, comment: created, comment: deleted, and comment: updated | #f1c40f
 HEX_SUCCESS | N | Hex color of merge, and approve | #2ecc71
 
-If you want to use `.env` file, copy the `example.env` as `.env` and modify it as needed. 
+If you want to use `.env` file, copy the `example.env` as `.env` and modify it as needed.
 Your configuration would look like the example below:
 
 ```

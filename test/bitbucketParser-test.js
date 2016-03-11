@@ -29,6 +29,20 @@ describe('generateMessage', function () {
         });
     });
 
+    it('should have reviewers mentions in created message if mentionReviewers switch is true', function (done) {
+        readFile('test/json/general.json', function (err, data) {
+            data = JSON.parse(data);
+            util.FEATURE_SWITCH.mentionReviewers = true;
+            var out = parser.generateMessage(data, 'pullrequest:created');
+
+            expect(out).toBeDefined();
+            expect(out.fields.length).toEqual(3);
+
+            util.FEATURE_SWITCH.mentionReviewers = false;
+            done();
+        });
+    });
+
     it('should return updated message if passed updated action', function (done) {
         readFile('test/json/general.json', function (err, data) {
             data = JSON.parse(data);
