@@ -44,6 +44,6 @@
       "description": "Hex Color for Merge & Approve",
       "value": "#2ecc71",
       "required": false
-    },
+    }
   }
 }
