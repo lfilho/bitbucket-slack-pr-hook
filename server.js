@@ -2,14 +2,12 @@
 
 var express = require('express');
 var bodyParser = require('body-parser');
-var logfmt = require('logfmt');
 
 var config = require('./lib/config');
 var slackService = require('./lib/slackService');
 var bitbucketParser = require('./lib/bitbucketParser');
 
 var app = express();
-app.use(logfmt.requestLogger());
 app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
