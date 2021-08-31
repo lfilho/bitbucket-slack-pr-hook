@@ -12,6 +12,7 @@ WORKDIR /app
 RUN useradd -m -d /app app
 # Run install first to cache the step
 ADD package.json /app/package.json
+RUN npm config set registry http://registry.npmjs.org/
 RUN npm install
 ADD . /app
 
