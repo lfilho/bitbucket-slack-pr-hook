@@ -56,8 +56,11 @@ We all like emojis. To add emoji icons to your PR actions use this environment v
 This only add emojis to messages with %33 chance. If you want emojis always on messages check the following flag.
 
 For the color red following emojis used; `:ahhhhhhhhh:`, `:fire:`, `:boom:` ; :ahhhhhhhhh:, :fire:, :boom:
+
 For the color green following emojis used; `:bob_ross_parrot:`, `:success:`, `:cool-doge:`, `:conga-parrot:`, `:birthday_party_parrot:`, `:bananadance_lsd:` ; ":bob_ross_parrot:", ":success:", ":cool-doge:", ":conga-parrot:", ":birthday_party_parrot:", ":bananadance_lsd:"
+
 For the color yellow following emojis used; `:warning:`, `:confused_dog:`, `:mild-panic-intensifies:`; ":warning:", ":confused_dog:", ":mild-panic-intensifies:"
+
 For the color blue following emojis used; `:information_source:`, `:speech_balloon:` ; ":information_source:", ":speech_balloon:"
 
 Some emojis are custom emojis where you may need to add to your slack workspace. Sorry emojis cannot be changed currently.
