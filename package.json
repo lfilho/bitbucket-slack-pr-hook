@@ -1,11 +1,11 @@
 {
   "name": "bitbucket-slack-pr-hook",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Send BitBucket Pull Request notifications to Slack.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lfilho/bitbucket-slack-pr-hook"
+    "url": "https://github.com/berkayturanci/bitbucket-slack-pr-hook"
   },
   "scripts": {
     "start": "node server",
@@ -23,12 +23,12 @@
     "docker",
     "chatops"
   ],
-  "author": "Luiz Gonzaga dos Santos Filho",
+  "author": "Berkay Turancı",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lfilho/bitbucket-slack-pr-hook/issues"
+    "url": "https://github.com/berkayturanci/bitbucket-slack-pr-hook/issues"
   },
-  "homepage": "https://github.com/lfilho/bitbucket-slack-pr-hook",
+  "homepage": "https://github.com/berkayturanci/bitbucket-slack-pr-hook",
   "dependencies": {
     "array.prototype.find": "^2.1.1",
     "body-parser": "^1.4.3",
