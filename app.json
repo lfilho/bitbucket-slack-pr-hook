@@ -25,6 +25,22 @@
       "description": "Set to true if you want to mention reviewers in slack channel.",
       "required": false
     },
+    "MENTION_OWNERS": {
+      "description": "Set to true if you want to mention PR owners on comment action in slack channel.",
+      "required": false
+    },
+    "USE_EMOJIS": {
+      "description": "Set to true if you want to use emoji icons on slack messages. %33 of chance emoji will be used.",
+      "required": false
+    },
+    "EMOJI_ALWAYS": {
+      "description": "Set to true if you want to use emoji icons on all slack messages. This will effects if you enable USE_EMOJIS flag too.",
+      "required": false
+    },
+    "USERS": {
+      "description": "Set a list of users with bitbucketId|slackId in order to mention them properly in the slack messages. Check example.env file for proper definition.",
+      "required": ""
+    },
     "HEX_INFO": {
       "description": "Hex Color for Merge & Approve",
       "value": "#3498db",
